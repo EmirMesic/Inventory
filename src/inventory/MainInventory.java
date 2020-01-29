@@ -1,5 +1,6 @@
 package inventory;
 
+
 import java.util.Scanner;
 
 public class MainInventory {

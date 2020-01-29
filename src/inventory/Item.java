@@ -17,7 +17,7 @@ public class Item {
 	private double quantity;
 	private double price;
 		
-	public Item(String name, int quantity, double price) {
+	public Item(String name, double quantity, double price) {
 		this.id = counterId++;
 		this.name = name;
 		this.quantity = quantity;
@@ -54,7 +54,7 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "Item [id=" + id + ", name=" + name + ", quantity=" + quantity + ", price=" + price + "]";
+		return "Item id: " + id + ", name: " + name + ", quantity: " + quantity + ", price: " + price ;
 	}
 	
 	

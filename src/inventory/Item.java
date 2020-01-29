@@ -14,12 +14,10 @@ public class Item {
 	
 	private int id;
 	private String name;
-	private int quantity;
+	private double quantity;
 	private double price;
-	
-	
-	
-	public Item(String name, int quantity, double price) {
+		
+	public Item(String name, double quantity, double price) {
 		this.id = counterId++;
 		this.name = name;
 		this.quantity = quantity;
@@ -30,10 +28,6 @@ public class Item {
 		return id;
 	}
 
-	public void generateId() {
-		this.id = id;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -42,7 +36,7 @@ public class Item {
 		this.name = name;
 	}
 
-	public int getQuantity() {
+	public double getQuantity() {
 		return quantity;
 	}
 
@@ -60,7 +54,7 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "Item [id=" + id + ", name=" + name + ", quantity=" + quantity + ", price=" + price + "]";
+		return "Item id: " + id + ", name: " + name + ", quantity: " + quantity + ", price: " + price ;
 	}
 	
 	

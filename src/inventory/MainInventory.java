@@ -6,20 +6,20 @@ import java.util.Scanner;
 public class MainInventory {
 	public static void main(String[] args) {
 	
-		System.out.println("Please choose: ");
+		System.out.println("1. Create new item \n2. See list of items \n3. Update item \n4. Delete item ");
 		Scanner input = new Scanner(System.in);
-		int menuChoice = input.nextInt();
 		InventoriClass inventory = new InventoriClass();
 		
+		int menuChoice = input.nextInt();
 		while(menuChoice!=0) {
-			System.out.println("1. Create new item /n2. See list of items /n3. Update item /4. Delete item ");
+
 			switch(menuChoice) {
 			case 1:
 				System.out.print("Input name: ");
 				String name = input.next();
 				System.out.print("Input quantity: ");
 				double quantity = input.nextDouble();
-				System.out.print("Input name: ");
+				System.out.print("Input price: ");
 				double price = input.nextDouble();
 				inventory.createItem(name, quantity, price);
 				break;
@@ -34,7 +34,7 @@ public class MainInventory {
 					System.out.println("Index " + i + " "+ inventory.getItem(i));
 				System.out.print("Input item idex you want to update: ");
 				int index = input.nextInt();
-				System.out.println("1. Change name/n2.Change quantity/3.Change price");
+				System.out.println("1. Change name \n2.Change quantity \n3.Change price");
 				int choice = input.nextInt();
 				Item tempItem = inventory.getItem(index);
 				switch(choice) {
@@ -58,7 +58,7 @@ public class MainInventory {
 			case 4:
 				break;
 			}
-			
+			System.out.println("1. Create new item \n2. See list of items \n3. Update item \n4. Delete item ");
 			menuChoice = input.nextInt();
 		}
 		
